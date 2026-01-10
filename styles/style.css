@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /*comportamento do scroll*/
+}
+:root {
+    --primary-color: #fa0d68;
+    --secondary-color: rgba(155, 4, 80, 0.8);
+    --tertiary-color: #000000;
+    --text-color: #e2e8f0;
+    --glass:rgba(255, 255, 255, 0.1);
+}
+body {
+    background-color: var(--tertiary-color);
+    color: var(--text-color);
+}
+.navegacao {
+    position: fixed;
+    top: 0;
+    background: var(--secondary-color);
+    width: 100%;
+    z-index: 100;
+    padding: 1.5rem;
+}
+.menu{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 3rem;
+}
+.menu_link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+}
+.menu_link:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    transition: width 0.5s ease;
+}
+.menu_link:hover:after {
+    width: 100%;
+}
+.foto_perfil {
+    width: 400px;
+    height: 400px;
+    box-shadow: 0 0 20px rgba(243, 62, 228, 0.3);
+    border-radius: 50%;
+    border: 4px solid var(--glass);
+    animation: flutuar 5s ease-in-out infinite;
+}
+.cabecalho {
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+h1 {
+    font-size: 3.5rem;
+    color:var(--primary-color);
+    margin: 20px;
+}
+.subtitulo {
+    font-size: 2rem;
+    color: var(--text-color);
+}
+.sobre {
+    padding: 6rem 2rem;
+}
+.sobre_titulo {
+    font-size: 3rem;
+    color: var(--text-color);
+    text-align: center;
+}
+.sobre_caixa {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 16px;
+    border: 1px solid var(--glass);
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.05)
+}
+.sobre_paragrafo {
+    text-align: center;
+    font-size: 1.2rem;
+}
+.projetos {
+    padding: 6rem 2rem;
+}
+.projeto_imagem {
+    height: 200px;
+    width: 100%;
+}
+.projetos_titulo {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+.projetos_caixa {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.projetos_card {
+    background: rgba(255, 255, 255, 0.05);
+    height: 350px;
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--glass);
+    overflow: hidden;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+.projetos_card:hover {
+    box-shadow: 0 10px 20px var(--secondary-color);
+    transform: translateY(-10px) scale(1.03);
+}
+.caixa_textos_projetos {
+    padding: 1.5rem;
+}
+.paragrafo_projetos {
+    color: var(--text-color);
+}
+.info_projetos {
+    margin-bottom: 5px;
+}
+.contatos {
+     padding: 6rem 2rem;
+}
+.contatos_titulo {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+.formulario_contato {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    padding: 2rem;
+    border: 1px solid var(--glass);
+    border-radius: 16px;
+}
+.campo_form {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    color: var(--text-color);
+    border: 1px solid var(--glass);
+    outline: none;
+    resize: none;
+}
+.campo_form:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 10px rgba(243, 62, 228, 0.3);
+}
+.grupo_form {
+    margin-bottom: 1.5rem;
+}
+.botao_form {
+    color: var(--text-color);
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+ 
+    width: 100%;
+    transition: all 0.5s ease;
+}
+.botao_form:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(155, 4, 80, 0.8);
+}
+.particulas {
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    background: 
+    radial-gradient(circle at 10% 20%, var(--primary-color) 0%, transparent 25%),
+    radial-gradient(circle at 80% 70%, var(--secondary-color) 0%, transparent 30%);
+}
+@keyframes flutuar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Rharume</title>
+</head>
+<body>
+    <div class="particulas"></div>
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#inicio" class="menu_link">Início</a>
+            </li>
+            <li>
+                <a href="#sobre" class="menu_link">Sobre</a>
+            </li>
+            <li>
+                <a href="#projetos" class="menu_link">Projetos</a>
+            </li>
+            <li>
+                <a href="#contatos" class="menu_link">Contatos</a>
+            </li>
+        </ul>
+    </nav>
+    <main id="inicio" class="cabecalho">
+        <img src="assets/eu.jpg" alt="foto de Rharume" class="foto_perfil">
+        <h1>Rharume Neres</h1>
+        <p class="subtitulo">Desenvolvedora Front - End</p>
+    </main>
+
+
+    <section id="sobre" class=sobre>
+        <h2 class="sobre_titulo">Sobre mim</h2>
+        <div class="sobre_caixa">
+            <p class=sobre_paragrafo>
+                Olá, sou Rharume Neres, estudante de Sistemas de Informação e apaixonado por Front-end. Trabalho com HTML, CSS e JavaScript, criando interfaces simples e funcionais, e estou sempre aprendendo e evoluindo no desenvolvimento web.
+            </p>
+        </div>
+    </section>
+    
+    
+    <section id="projetos" class="projetos">
+            <h2 class="projetos_titulo">Meus Projetos</h2>
+        
+        <div class="projetos_caixa">
+
+            <div class="projetos_card">
+                <img src="assets/soda.png" alt="Projeto1" class="projeto_imagem">
+                <div class="caixa_textos_projetos">
+                    <h3 class="info_projetos">Soda</h3>
+                    <p class="paragrafo_projetos">Projeto frontend desenvolvido para praticar HTML, CSS e JavaScript. Exibe uma galeria interativa de frutas com imagens e nomes, focando em organização visual, layout responsivo e publicação na web.</p>
+                </div>
+            </div>
+
+            <div class="projetos_card">
+                <img src="assets/portfolio.png" alt="Projeto2" class="projeto_imagem">
+                <div class="caixa_textos_projetos">
+                    <h3 class="info_projetos">1° Portfólio</h3>
+                    <p class="paragrafo_projetos">Primeira versão do meu portfólio, construída em HTML, CSS e JavaScript. Serve como registro da minha evolução no desenvolvimento web, focando em layout, estrutura e design inicial, mesmo sem projetos adicionados ainda.</p>
+                </div>
+            </div>
+
+            <div class="projetos_card">
+                <img src="assets/Kusuriya No Hitorigoto.jpg" alt="Projeto3" class="projeto_imagem">
+                <div class="caixa_textos_projetos">
+                    <h3 class="info_projetos">Projeto em Desenvolvimento...</h3>
+                    <p class="paragrafo_projetos">.........</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contatos" class="contatos">
+        <h2 class="contatos_titulo">Entre em Contato</h2>
+        
+        <form class="formulario_contato" id="formulario" onsubmit="enviarWhats(event)">
+            <div class="grupo_form">
+                <input placeholder="Nome" class="campo_form" id="nome">
+            </div>
+            
+            <div class="grupo_form">
+                <textarea class="campo_form" placeholder="Digite sua mensagem" id="mensagem"></textarea>
+            </div>
+            <button type="submit" class="botao_form">Enviar WhatsApp</button>
+        </form>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
